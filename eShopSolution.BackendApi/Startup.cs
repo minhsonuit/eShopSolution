@@ -31,6 +31,7 @@ namespace eShopSolution.BackendApi
         options.UseSqlServer(Configuration.GetConnectionString("eShopSolutionDb")));
             //DI
             services.AddTransient<IPublicProductService, PublicProductService>();
+            services.AddTransient<IManageProductService, ManageProductService>();
             services.AddControllersWithViews();
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
